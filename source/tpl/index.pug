@@ -1,9 +1,27 @@
-doctype html
-html.no-js
-	head
-		//include include/meta
-		title Guides
-		//include include/css
-	body
-		| Hello
-		
+extand _layout
+
+block content
+	section.guides__section
+		.guides__title Кнопки
+		.guides__row
+			.guides__col-4
+				.guides__subtitle Кнопка маленькая
+				+btn('Кнопка').btn_size_s
+			.guides__col-4
+				.guides__subtitle Кнопка обычная
+				+btn('Кнопка')
+			.guides__col-4
+				.guides__subtitle Кнопка большая
+				+btn('Кнопка').btn_size_l
+	section.guides__section
+		.guides__title Текстовое поле
+		.guides__row
+			.guides__col-4
+				.guides__subtitle Текстовое поле маленькое
+				+input('Текстовое поле').input_size_s
+			.guides__col-4
+				.guides__subtitle Текстовое поле обычное
+				+input('Текстовое поле')
+			.guides__col-4
+				.guides__subtitle Текстовое поле большое
+				+input('Текстовое поле').input_size_l

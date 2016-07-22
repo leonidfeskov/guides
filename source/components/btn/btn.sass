@@ -1,0 +1,43 @@
+.btn
+	box-sizing: border-box
+	background: $colorPrimary
+	border: 1px solid transparent
+	display: inline-block
+	vertical-align: middle
+	text-decoration: none
+	border-radius: $controlBorderRadius
+	height: $controlHeight
+	padding: 0 1.5em
+	margin: 0
+	font-weight: 400
+	font-size: $fontSize
+	line-height: $controlHeight - 2px
+	font-family: $fontFamily
+	color: #fff
+	text-align: center
+	cursor: pointer
+	transition: background 200ms linear, color 200ms linear, border 200ms linear
+	-webkit-appearance: none
+
+	&:hover, &:focus
+		text-decoration: none
+		background-color: $colorPrimaryHover
+		outline: none
+
+	&:active
+		background-color: $colorPrimaryActive
+
+	&_size_s
+		height: $controlHeightS
+		font-size: $fontSizeS
+		line-height: $controlHeightS - 2px
+
+	&_size_l
+		height: $controlHeightL
+		font-size: $fontSizeL
+		line-height: $controlHeightL - 2px
+
+	&[disabled]
+		background-color: $colorDisabled
+		color: $colorDisabledText
+		

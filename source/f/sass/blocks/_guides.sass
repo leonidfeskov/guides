@@ -1,0 +1,63 @@
+.layout
+	display: table
+	width: 100%
+	background-color: #fff
+
+	&__aside
+		display: table-cell
+		vertical-align: top
+		width: 300px
+		padding-left: 4%
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.1)
+
+	&__content
+		display: table-cell
+		vertical-align: top
+		padding-right: 4%
+
+.guides
+	margin-top: 40px
+	font: 16px/1.2 Arial, sans-serif
+
+	&__wrap
+		box-sizing: border-box
+		padding: 40px
+		max-width: 1600px
+		min-width: 320px
+		margin: 0 auto
+
+	&__section
+		border: 1px solid #f2f2f2
+		padding: 40px 30px
+		margin-bottom: 60px
+		position: relative
+
+	&__title
+		background-color: #fff
+		padding: 0 10px
+		position: absolute
+		left: 20px
+		top: -30px
+		font-size: 40px
+
+	&__subtitle
+		font-size: 16px
+		margin-bottom: 20px
+		color: #666
+
+	&__row
+		margin: 0 -10px
+		&:after
+			content: ''
+			display: table
+			clear: both
+
+	&__col
+		box-sizing: border-box
+		float: left
+		padding: 0 10px
+
+	@for $i from 0 through 12
+		&__col-#{$i}
+			@extend .guides__col
+			width: $i / 12 * 100%

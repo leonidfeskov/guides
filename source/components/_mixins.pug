@@ -1,0 +1,5 @@
+mixin input(placeholder, value, name)
+	input.input(type="text", placeholder=(placeholder ? placeholder: ''), value=(value ? value : '') , name=(name ? name: ''))&attributes(attributes)
+
+mixin btn(text)
+	button.btn&attributes(attributes)!= text

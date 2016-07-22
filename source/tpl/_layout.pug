@@ -1,0 +1,85 @@
+include ../components/_mixins.pug
+
+doctype html
+html.no-js
+	head
+		meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+		meta(name='description', content='')
+		meta(name='keywords', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='format-detection', content='telephone=no')
+		meta(http-equiv='x-rim-auto-match', content='none')
+		link(rel='shortcut icon', href='../f/i/favicon.ico', type='image/x-icon')
+		title Components
+		link(href='/f/css/components.css', media='screen', rel='stylesheet', type='text/css')
+		link(href='/f/css/main.css', media='screen', rel='stylesheet', type='text/css')
+	body
+		header.header
+			.b-wrapper
+				a(href="/html/").header__logo C
+		.layout
+			.layout__aside
+				aside.nav
+					-
+						var nav = [
+							{
+								name: 'Форма',
+								link: "#",
+								sublist: [
+									{
+										name: 'Кнопка',
+										link: "#btn"
+									},
+									{
+										name: 'Текстовое поле',
+										link: "#input"
+									}
+								]
+							},
+							{
+								name: 'Форма',
+								link: "#",
+								sublist: [
+									{
+										name: 'Кнопка',
+										link: "#btn"
+									},
+									{
+										name: 'Текстовое поле',
+										link: "#input"
+									}
+								]
+							},
+							{
+								name: 'Форма',
+								link: "#",
+								sublist: [
+									{
+										name: 'Кнопка',
+										link: "#btn"
+									},
+									{
+										name: 'Текстовое поле',
+										link: "#input"
+									}
+								]
+							}
+						]
+					ul.nav__list
+						each item in nav
+							li.nav__item
+								a(href=item.link).nav__link!= item.name
+								if item.sublist
+									ul.nav__list-lv2
+										each itemLv2 in item.sublist
+											li.nav__item-lv2
+												a(href=itemLv2.link).nav__link-lv2!= itemLv2.name
+							
+			.layout__content
+				section.guides
+					.guides__wrap
+						block content
+		footer.footer
+			.b-wrapper 2016 &copy; Leonid Feskov
+		
+							

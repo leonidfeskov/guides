@@ -1,0 +1,30 @@
+.nav
+	padding: 30px 0
+
+	&__list, &__list-lv2
+		list-style: none
+		margin: 0
+		padding: 0
+		font-size: 20px
+
+	&__list-lv2
+		margin-left: 20px
+		font-size: 16px
+
+	&__item
+		border-bottom: 1px solid #f2f2f2
+
+	&__link, &__link-lv2
+		display: block
+		padding: 10px 20px
+		color: $colorPrimary
+		text-decoration: none
+		color: #333
+
+	&__link-lv2
+		border-left: 2px solid transparent
+
+		&:hover, &_active
+			border-left-color: $colorPrimary
+			background-color: #fafafa
+			color: $colorPrimary
